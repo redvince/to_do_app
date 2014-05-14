@@ -10,7 +10,7 @@
 	<author email="vincent.redmond@webelevate.ie" href="http://www.digitalskillsacademy.com/">
 		Vincent Redmond
 	</author>
-	<preference name="SplashScreen" value="splash" />
+	<preference name="SplashScreen" value="screen" />
 	<preference name="SplashScreenDelay" value="10000" />
 	<preference name="phonegap-version" value="3.3.0" />
 	<preference name="SplashScreenDelay" value="10000" />
@@ -21,7 +21,7 @@
 	<icon src="res/icon/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
 	<icon src="res/icon/icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
 	<icon src="res/icon/icon-96-xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
-
+	<gap:splash src="splash.png" />
 	<gap:splash src="res/screen/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
 	<gap:splash src="res/screen/screen-mdpi-portrait.png"       gap:platform="android" gap:qualifier="port-mdpi" />
 	<gap:splash src="res/screen/screen-hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
