@@ -73,7 +73,8 @@ ul{
 	list-style-type: none;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	
+	-webkit-padding-start: 0px;
+	-moz-padding-start: 0px;
 }
 
 body{
