@@ -81,7 +81,6 @@ toDoApp.controller('ToDoListController', function($scope) {
 		if ($scope.completed === 'true') {
 			$scope.completed = 'false';	
 		}
-
 		else {
 			$scope.completed = 'true';
 		}	
