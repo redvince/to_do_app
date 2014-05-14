@@ -1,0 +1,70 @@
+<!--
+* AngularJS View: index.html
+* Author: Vincent Redmond
+* Assignment 2: WE3.0 Mobile Web Applications, Digital Skills Academy
+* Student ID: D13126159
+* Date : 2014/05/14
+-->
+<!DOCTYPE html>
+<!-- Directive to tell angular this is root of application, whole page -->
+<html data-ng-app="toDoApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>To Do App</title>
+		<script src="js/angular.js"></script>
+		<script src="phonegap.js"></script>
+		<script type="text/javascript" src="js/toDoApp.js"></script>
+		<link rel="stylesheet" href="css/toDo.css">
+		<link rel="stylesheet" href="fa/css/font-awesome.min.css">
+	</head>
+	<body>
+		<!-- reference the controller -->
+		 <div data-ng-controller="ToDoListController" class="center">
+			<h2>To Do App</h2>
+			<!-- form for adding tasks to model(scope) -->
+			<form data-ng-submit="addToDo()" class="myList myRow">
+				<!-- data-ng-models bind the html elements(view) to the model(scope) -->
+				<input type="text" data-ng-model="newToDOwhat" placeholder="Task" class="matchMyColumns" />
+				</br>
+				<input type="text" data-ng-model="newToDOdetails" placeholder="Details" class="matchMyColumns" />
+				</br>
+				<input type="date" data-ng-model="newToDOwhen" class="matchMyColumns" />
+				<button type="submit" value="Add Task"> <i class="fa fa-files-o"></i> Add</button>
+			</form>
+			<br><br>
+			<!-- searchTerm is is used to filter repeated list -->
+			<input type="text" data-ng-model="searchTerm" class="matchMyColumns" placeholder="Search Tasks" />
+			<!-- result of function bound to the view-->
+			<span class="myRow"> {{ tasksLeft() }} left to do.</span >
+			
+			<ul class="myColumns myList">
+				<li><!-- data-ng-click directive triggers funcions from the controller and updates the view-->
+					<button data-ng-click="sortDone()"><i class="fa fa-minus-square-o"></i> <i class="fa fa-sort"></i></button>
+					<button data-ng-click="sortTask()"><i class="fa fa-files-o"></i> <i class="fa fa-sort"></i></button>		
+					<button data-ng-click="sortDate()"><i class="fa fa-calendar"></i> <i class="fa fa-sort"></i></button>
+				</li>
+			</ul>
+			
+			<ul >
+				<li data-ng-repeat="currentToDo in toDo | orderBy : [sorts[0], sorts[1], sorts[2]] | filter : {done:completed} | filter : {what:searchTerm}" class="done-{{currentToDo.done}} myColumns">
+					<!-- checkbox bound to .done boolean -->
+					<input type="checkbox" data-ng-model="currentToDo.done"></input>
+					<!-- more bound values displayed in the view -->
+					<span >{{ currentToDo.what }}</span> 
+					<span>{{ currentToDo.when | date: 'dd-MM-yy' }}</span>
+					<!-- functions passed curent task as parameter -->
+					<button data-ng-click="delete(currentToDo)" class="smallButton"><i class="fa fa-times-circle"></i></button>
+					<button data-ng-click="itemInfo(currentToDo)" class="smallButton"><i class="fa fa-info-circle"></i></button>
+				</li>
+			</ul>	
+			
+			<div class="myList myRow"><!-- data-ng-click directive triggers funcions from the controller and updates the view -->
+				<button data-ng-click="toggleDone()"><i class="fa fa-compress"></i></button>
+				<button data-ng-click="viewAll()"><i class="fa fa-expand"></i></button>
+				<button data-ng-click="deleteAll()"><i class="fa fa-times-circle"></i> Done</button>
+			</div>
+		</div>
+	</body>
+</html>

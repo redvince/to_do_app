@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget id="todoapp" version="0.0.1">
+    <name>ToDoApp</name>
+    <description>
+        A single page to do list mobile web application.
+    </description>
+    <author email="vincent.redmond@webelevate.ie" href="http://www.digitalskillsacademy.com/">
+        Vincent Redmond
+    </author>
+    <content src="index.html" />
+    <icon src="icon.png" />
+    <access origin="*" />
+</widget>

@@ -1,0 +1,93 @@
+@media only screen and (min-width: 768px){
+
+	.center{
+		margin:auto;
+		width:90%;
+	}
+		
+	.smallButton{
+		width: 4% !important;
+	}
+
+	.searchTerm{
+		margin-left: 7px;
+		width: 20% !important;
+	}
+
+	.myColumns input, .myColumns span, .myColumns button{
+		width:20%;
+		display: inline-block;
+		word-wrap:break-word;
+	}
+	
+	.matchMyColumns{
+		width:40%;
+	}
+	
+	.myRow button{
+		width: 20%;
+	}
+}
+
+@media only screen and (max-width: 767px){
+		
+	span{
+		font-size: 85%;
+	}
+	
+	.smallButton{
+		width: 9% !important;
+	}
+
+	.searchTerm{
+		margin-left: 7px;
+		width: 24% !important;
+	}
+
+	.myColumns input, .myColumns span, .myColumns button{
+		width:24%;
+		display: inline-block;
+		word-wrap:break-word;
+	}
+	
+	.matchMyColumns{
+		width:48%;
+	}
+	
+	.myRow button{
+		width: 24%;
+	}
+}
+
+
+.done-true{
+	color:#C0C0C0;
+}
+		
+.myList{
+	-webkit-padding-start: 0px;
+	-moz-padding-start: 0px;
+}
+
+ul{ 
+	list-style-type: none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	-webkit-padding-start: 0px;
+	-moz-padding-start: 0px;
+}
+
+body{
+	background-color:#F4F7F9;
+	font-family: ‘Arial Narrow’, sans-serif;
+	color: #32424A;
+}
+
+button{
+	background-color: #7EA6BA;
+	color: #F6F8FA;
+}
+
+button:hover{
+	border: 1px solid #999;color:#FFF;
+}
