@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
-        xmlns:gap = "http://phonegap.com/ns/1.0"
+        xmlns:gap = "http://phonegap.com/ns/3.3.0"
         id        = "todoapp"
         version   = "1.0.0">
     <name>ToDoApp</name>
@@ -10,6 +10,10 @@
     <author email="vincent.redmond@webelevate.ie" href="http://www.digitalskillsacademy.com/">
         Vincent Redmond
     </author>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
+    <preference name="phonegap-version" value="3.3.0" />
 
     <icon src="icon.png" />
     <icon src="res/icon/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
@@ -21,7 +25,7 @@
     <gap:splash src="res/screen/screen-mdpi-portrait.png"       gap:platform="android" gap:qualifier="port-mdpi" />
     <gap:splash src="res/screen/screen-hdpi-portrait.png"       gap:platform="android" gap:qualifier="port-hdpi" />
     <gap:splash src="res/screen/screen-xhdpi-portrait.png"      gap:platform="android" gap:qualifier="port-xhdpi" />
-    <preference name="SplashScreenDelay" value="5000"/>
+    <preference name="SplashScreenDelay" value="10000"/>
 
     <access origin="*" />
 </widget>
