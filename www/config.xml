@@ -7,7 +7,10 @@
     <author email="vincent.redmond@webelevate.ie" href="http://www.digitalskillsacademy.com/">
         Vincent Redmond
     </author>
-    <content src="index.html" />
     <icon src="icon.png" />
+    <icon src="res/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="res/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="res/icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="res/icon-96-xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
     <access origin="*" />
 </widget>
