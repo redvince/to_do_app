@@ -9,10 +9,10 @@ var toDoApp = angular.module('toDoApp', []);
 toDoApp.controller('ToDoListController', function($scope) {
 	//add properties to scope object, list of to do tasks
 	$scope.toDo = [
-					{ what:'Learn JavaScript', when: '2014-05-28', done: false, details:'UPC Like JavaScript'},
-					{ what:'Submit this', when: '2014-05-14', done: true, details:'Has to be Submitted'},
-					{ what:'Take a break', when: '2015-07-06', done: false, details:'Will be necessary' },
-					{ what:'Make Daniel lol', when: '2014-05-21', done: true, details:'You Just Did, lol'}
+		{ what:'Learn JavaScript', when: '2014-05-28', done: false, details:'UPC Like JavaScript'},
+		{ what:'Submit this', when: '2014-05-14', done: true, details:'Has to be Submitted'},
+		{ what:'Take a break', when: '2015-07-06', done: false, details:'Will be necessary' },
+		{ what:'Make Daniel lol', when: '2014-05-21', done: true, details:'You Just Did, lol'}
 	];
 	//array of default values to order list in view
 	$scope.sorts = ['done', 'when', 'what'];
